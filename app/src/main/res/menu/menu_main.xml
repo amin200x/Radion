@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.amin.radion.launch.MainActivity">
+
+    <item
+            android:id="@+id/action_favorite"
+            android:title="@string/favorite"
+            android:icon="@drawable/red_star"
+            android:orderInCategory="1"
+            app:showAsAction="always"/>
+    <item
+            android:id="@+id/action_recently"
+            android:title="@string/recently_played"
+            android:icon="@drawable/recent"
+            android:orderInCategory="2"
+            app:showAsAction="always"/>
+    <item
+            android:id="@+id/action_search"
+            android:title="@string/search"
+            android:icon="@drawable/search"
+            android:orderInCategory="3"
+            app:showAsAction="always"/>
+    <item
+            android:id="@+id/action_about"
+            android:title="@string/about"
+            android:icon="@drawable/about"
+            android:orderInCategory="4"
+            app:showAsAction="ifRoom"/>
+</menu>

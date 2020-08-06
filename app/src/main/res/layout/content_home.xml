@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".launch.HomeActivity">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayoutMenu"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/playerLinearLayout"
+            android:visibility="visible">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#17000000">
+
+            <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/yello_radio"
+                    android:id="@+id/imageButtonStation"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="fitCenter"/>
+
+            <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/imageButtonCountry"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/green_flag"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="fitCenter"/>
+
+            <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/green_language"
+                    android:id="@+id/imageButtonLanguage"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="fitCenter"/>
+
+            <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@drawable/genre"
+                    android:id="@+id/imageButtonGenre"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_shadow_end_color"
+                    android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="18sp"
+                android:ems="10"
+                android:id="@+id/editTextSearch"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Enter to Search"
+                android:paddingBottom="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="5dp"
+                android:visibility="visible"/>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="1.0">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    >
+
+                <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:id="@+id/stationListView"
+                        android:visibility="visible"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true">
+
+                </ListView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerLinearLayout"
+            android:background="@color/cardview_dark_background"
+            android:gravity="center_vertical"
+
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="showMainPlayePage">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical">
+
+                <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:id="@+id/logoImgView"
+                        android:layout_weight="0"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:onClick="showMainPlayePage"/>
+
+                <TextView
+                        android:text="Test Station"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/selectedStationNameTextView"
+                        android:layout_weight="1"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@android:color/holo_orange_dark"
+                        android:textSize="18sp"
+                        android:onClick="showMainPlayePage"/>
+            </LinearLayout>
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stationLoadingProgressBar"
+                    android:layout_weight="0"/>
+
+        </LinearLayout>
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:id="@+id/playImageButton"
+                android:layout_weight="0"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mainPlayPageLinearLayout"
+            android:background="#aa85aff7"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center_vertical|center_horizontal">
+
+        <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                app:srcCompat="@drawable/no_logo"
+                android:id="@+id/imageViewPlayPageLogo"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:background="#e3dada"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewStationDetails"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="serif"
+                android:textSize="16sp"
+                android:lineSpacingExtra="6sp"
+                android:textColor="#b34a0c"
+                android:textAllCaps="false"
+                android:textStyle="italic"/>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_gravity="center">
+
+            <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    app:srcCompat="@android:drawable/ic_media_play"
+                    android:id="@+id/playimageButton2"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="2"/>
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/stationLoadingProgressBar2"
+                    android:layout_weight="0"
+                    android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recentStaionListView"
+                android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/progressbarRelativeLayout"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/progressBar2"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="121dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/radionGifRelativeLayout"
+            android:visibility="visible">
+
+        <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/radion_anim"
+                android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

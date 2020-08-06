@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Radion</string>
+    <string name="favorite">Favorite</string>
+    <string name="recently_played">Recently Played</string>
+    <string name="search">Search</string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="about">About</string>
+</resources>
