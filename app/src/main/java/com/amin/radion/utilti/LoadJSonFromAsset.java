@@ -148,7 +148,7 @@ public class LoadJSonFromAsset {
             for (int j = 0; j < countryList.size(); j++) {
                 try {
                     if (countryList.get(j).getAbbreviation().toUpperCase()
-                            .equals(jsonObject.getString("value").toUpperCase())) {
+                            .equals(jsonObject.getString("name").toUpperCase())) {
                         Country country = countryList.remove(j);
                         if (!jsonObject.getString("stationcount").isEmpty())
                             mapCountry.put(country, Integer.valueOf(jsonObject.getString("stationcount")));
@@ -182,7 +182,7 @@ public class LoadJSonFromAsset {
             for (int j = 0; j < languageList.size(); j++) {
                 String lang = languageList.get(j).toString().toLowerCase();
                 try {
-                    if (jsonObject.getString("value").toLowerCase().contains(languageList.get(j).toString().toLowerCase())) {
+                    if (jsonObject.getString("name").toLowerCase().contains(languageList.get(j).toString().toLowerCase())) {
                         if (map.containsKey(lang)) {
                             Integer newCount = map.get(lang) + Integer.valueOf(jsonObject.getString("stationcount"));
                             map.put(lang, newCount);
